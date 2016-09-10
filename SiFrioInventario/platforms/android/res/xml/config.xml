@@ -35,4 +35,8 @@
     <preference name="InAppBrowserStorageEnabled" value="True" />
     <preference name="SuppressesIncrementalRendering" value="True" />
     <preference name="windows-target-version" value="10.0" />
+    <access origin="*.firebaseio.com" />
+    <access origin="auth.firebase.com" />
+    <access origin="*.firebaseapp.com " />
+    <access origin="auth.firebaseapp.com " />
 </widget>

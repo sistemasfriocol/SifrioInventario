@@ -1,0 +1,54 @@
+﻿<ion-view view-title="Inventario">
+    <ion-content>
+        <h1>Inventario</h1>
+        <div class="list" ng-show="MostrarError">
+            <div class="card">
+                <div class="item item-text-wrap">
+                    {{Error}}
+                </div>
+            </div>
+        </div>
+        <div class="list">
+
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Bodega
+                </div>
+                <select ng-model="BodegaSeleccionada">
+                    <option ng- value="{{item.IdBodega}}" ng-repeat="item in ListaBodegas">{{item.Bodega1}}</option>
+
+                </select>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Codigo</span>
+                <input type="text" ng-model="Cod">
+            </label>
+            <button class="button button-block button-positive" ng-click="ClicBuscarProducto()">
+                Buscar
+            </button>
+
+          
+        </div>
+
+        <div class="list" ng-show="MostarDatos">
+            <div class="item item-divider">
+                {{ProductosBuscaInventario.Descripcion}}
+                </div>
+                <label class="item item-input">
+                    <span class="input-label">Estante</span>
+                    <input type="text" ng-model="ProductosBuscaInventario.Estante">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label" >Cantidad</span>
+                    <input type="text" ng-model="Cantidad">
+                </label>
+            <button class="button button-block button-positive" ng-click="CliGuardarConteo()">
+                Guardar Conteo
+            </button>
+            </div>
+
+
+        
+      
+    </ion-content>
+</ion-view>

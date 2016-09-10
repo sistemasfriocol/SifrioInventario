@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'firebase', 'starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -40,7 +40,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-
+  .state('app.login', {
+          url: '/login',
+          views: {
+              'menuContent': {
+                  templateUrl: 'templates/login.html',
+                  controller: 'AppCtrl'
+              }
+          }
+      })
   .state('app.browse', {
       url: '/browse',
       views: {
@@ -58,7 +66,15 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
       }
     })
-
+   .state('app.inventario', {
+       url: '/inventario',
+       views: {
+           'menuContent': {
+               templateUrl: 'templates/inventario.html',
+               controller: 'InventarioCtrl'
+           }
+       }
+   })
   .state('app.single', {
     url: '/playlists/:playlistId',
     views: {

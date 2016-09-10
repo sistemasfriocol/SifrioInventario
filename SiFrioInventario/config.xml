@@ -27,4 +27,8 @@
   <plugin name="cordova-plugin-whitelist" spec="~1.2.1" />
   <plugin name="cordova-plugin-statusbar" spec="~2.1.0" />
   <plugin name="ionic-plugin-keyboard" spec="~1.0.8" />
+  <access origin="*.firebaseio.com" />
+  <access origin="auth.firebase.com" />
+  <access origin="*.firebaseapp.com " />
+  <access origin="auth.firebaseapp.com " />
 </widget>
