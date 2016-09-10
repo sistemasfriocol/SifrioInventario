@@ -3,14 +3,14 @@
 
 .factory('Cadena', function () {
     var parametros = {
-        Cadena: 'http://localhost:50141/',
+        Cadena: 'http://www.serviciosfriocol.sicolombia.info/',
         Empleado: -1,
         NombreEmpleado: '',
         IdCliente: 0,
         habilitarMenu: false,
             };
     //var Cadena =http://localhost:49595/
-    //var Cadena = 'peluqueria.sicolombia.info';
+    //var Cadena = 'http://www.serviciosfriocol.sicolombia.info/';
 
     return {
         getCadena: function () {
