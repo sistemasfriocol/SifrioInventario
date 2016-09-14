@@ -7,20 +7,20 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.ionicframework.ionicsidemenu"
-        },
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.ionicframework.ionicsidemenu"
+            "PACKAGE_NAME": "com.Friocol.SiFrioInventario"
         },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.ionicframework.ionicsidemenu"
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.Friocol.SiFrioInventario"
         },
         "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.ionicframework.ionicsidemenu"
+            "PACKAGE_NAME": "com.Friocol.SiFrioInventario"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.Friocol.SiFrioInventario"
         },
         "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.ionicsidemenu"
+            "PACKAGE_NAME": "com.Friocol.SiFrioInventario"
         }
     },
     "dependent_plugins": {}
