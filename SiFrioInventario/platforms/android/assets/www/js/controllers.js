@@ -135,6 +135,7 @@ angular.module('starter.controllers', [])
     $scope.MostrarError = false;
     $scope.ProductosBuscaInventario = "";
     $scope.Error = "";
+    $scope.ColorBorde = "";
 
     $scope.AlertaTitulo = "Error al buscar el Producto";
     $scope.AlertaMensaje = "Mensaje de Error";
@@ -176,12 +177,15 @@ angular.module('starter.controllers', [])
         var idBod = this.BodegaSeleccionada
         var codProd = this.Cod;
         idBod
+        $scope.ColorBorde = "";
 
         var direccion = Cadena.getCadena().Cadena + 'api/ProductosBuscarInventario?CodProd=' + codProd + '&IdBodega=' + idBod;
 
         $http({
             method: 'GET',
-            url: direccion
+            url: direccion,
+
+
         }).then(function successCallback(response) {
             $scope.MostrarError = false;
 
@@ -213,14 +217,26 @@ angular.module('starter.controllers', [])
         }).then(function successCallback(response) {
             //getAllClientes();
 
-            $scope.MostarDatos = false;
+            if (response.data == true) {
 
-            $scope.MostrarError = true;
-            $scope.Error = "Datos Guardados Correctamente";
+                $scope.MostarDatos = false;
 
-            $timeout(function () {
-                $scope.MostrarError = false;
-            }, 1000);
+                $scope.MostrarError = true;
+                $scope.Error = "Datos Guardados Correctamente";
+
+                $timeout(function () {
+                    $scope.MostrarError = false;
+                }, 1000);
+            } else {
+                $scope.ColorBorde = "BordeRojo";
+
+                $scope.MostrarError = true;
+                $scope.Error = "Cantidades No Valida";
+
+                $timeout(function () {
+                    $scope.MostrarError = false;
+                }, 1000);
+            }
 
         }, function errorCallback(response) {
             $scope.MostrarError = true;

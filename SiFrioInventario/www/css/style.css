@@ -3,3 +3,21 @@
 .icono-azul{
     color:cornflowerblue;
 }
+
+.BordeVerde {
+    border-color:green;
+}
+.BordeRojo{
+    border-color:red;
+    border-style:solid;
+    border-width:2px;
+}
+.BordeRojo input{
+    color:red;
+}
+.BordeRojo span{
+    color:red;
+}
+.Datos{
+    padding:10px;
+}

@@ -1,13 +1,7 @@
 ﻿<ion-view view-title="Inventario">
     <ion-content>
         <h1>Inventario</h1>
-        <div class="list" ng-show="MostrarError">
-            <div class="card">
-                <div class="item item-text-wrap">
-                    {{Error}}
-                </div>
-            </div>
-        </div>
+
         <div class="list">
 
             <label class="item item-input item-select">
@@ -27,28 +21,40 @@
                 Buscar
             </button>
 
-          
+
         </div>
 
-        <div class="list" ng-show="MostarDatos">
+        <div class="list" ng-show="MostrarError">
+            <div class="card">
+                <div class="item item-text-wrap">
+                    {{Error}}
+                </div>
+            </div>
+        </div>
+
+        <div class="list Datos" ng-show="MostarDatos">
             <div class="item item-divider">
                 {{ProductosBuscaInventario.Descripcion}}
-                </div>
+            </div>
+            <label class="item item-input">
+                <span class="input-label">Estante</span>
+                <input type="text" ng-model="ProductosBuscaInventario.Estante">
+            </label>
+            <div ng-class="ColorBorde">
                 <label class="item item-input">
-                    <span class="input-label">Estante</span>
-                    <input type="text" ng-model="ProductosBuscaInventario.Estante">
-                </label>
-                <label class="item item-input">
-                    <span class="input-label" >Cantidad</span>
+
+                    <span class="input-label">Cantidad</span>
                     <input type="text" ng-model="Cantidad">
+
                 </label>
+            </div>
             <button class="button button-block button-positive" ng-click="CliGuardarConteo()">
                 Guardar Conteo
             </button>
-            </div>
+        </div>
 
 
-        
-      
+
+
     </ion-content>
 </ion-view>
