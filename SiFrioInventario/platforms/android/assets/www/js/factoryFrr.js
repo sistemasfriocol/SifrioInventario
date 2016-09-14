@@ -3,7 +3,7 @@
 
 .factory('Cadena', function () {
     var parametros = {
-        Cadena: 'http://www.serviciosfriocol.sicolombia.info/',
+        Cadena: 'http://localhost:50141/',
         Empleado: -1,
         NombreEmpleado: '',
         IdCliente: 0,

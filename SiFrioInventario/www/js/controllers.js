@@ -196,7 +196,7 @@ angular.module('starter.controllers', [])
 
             $timeout(function () {
                 $scope.MostrarError = false;
-            }, 1000);
+            }, 2000);
         });
 
         return '';
@@ -226,7 +226,7 @@ angular.module('starter.controllers', [])
 
                 $timeout(function () {
                     $scope.MostrarError = false;
-                }, 1000);
+                }, 2000);
             } else {
                 $scope.ColorBorde = "BordeRojo";
 
@@ -235,7 +235,7 @@ angular.module('starter.controllers', [])
 
                 $timeout(function () {
                     $scope.MostrarError = false;
-                }, 1000);
+                }, 2000);
             }
 
         }, function errorCallback(response) {
@@ -244,7 +244,7 @@ angular.module('starter.controllers', [])
 
             $timeout(function () {
                 $scope.MostrarError = false;
-            }, 1000);
+            }, 2000);
 
         });
     }
